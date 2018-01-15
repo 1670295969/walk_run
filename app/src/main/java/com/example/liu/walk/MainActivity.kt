@@ -153,7 +153,7 @@ class MainActivity : AppCompatActivity() {
                 tvWalkStatus.text = "开始第${walkRun.eventCount}次跑步"
             }
             AmMangerClient.TYPE_RUNNING -> {
-                if (walkRun.eventCount > reCount) {
+                if (walkRun.eventCount >= reCount) {
                     tvWalkStatus.text = "恭喜您完成了运动"
                     return
                 }
