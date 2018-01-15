@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                     .putExtra("re_count", reCount)
                     .putExtra("now_count", 1)
             amManager.setAndSendTask(AmMangerClient.REQ_RUNNING, runningIntent, (walkMin + runningMin) * 60 * 1000L)
-            tvWalkStatus.text = "第1次走路"
+            tvWalkStatus.text = "开始第1次走路"
         }
 
         findViewById<View>(R.id.btn_end).setOnClickListener {
@@ -150,10 +150,14 @@ class MainActivity : AppCompatActivity() {
         }
         when (walkRun.eventType) {
             AmMangerClient.TYPE_WALK -> {
-                tvWalkStatus.text = "第${walkRun.eventCount}次跑步"
+                tvWalkStatus.text = "开始第${walkRun.eventCount}次跑步"
             }
             AmMangerClient.TYPE_RUNNING -> {
-                tvWalkStatus.text = "第${walkRun.eventCount + 1}次走路"
+                if (walkRun.eventCount > reCount) {
+                    tvWalkStatus.text = "恭喜您完成了运动"
+                    return
+                }
+                tvWalkStatus.text = "开始第${walkRun.eventCount + 1}次走路"
             }
         }
     }
