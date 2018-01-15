@@ -47,12 +47,13 @@
 
     <TextView
         android:id="@+id/tv_status"
-        tools:text="该走路了"
-        android:textColor="@android:color/holo_red_light"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        tools:text="该走路了" />
 
 
 </LinearLayout>

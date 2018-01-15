@@ -153,7 +153,7 @@ class MainActivity : AppCompatActivity() {
                 tvWalkStatus.text = "第${walkRun.eventCount}次跑步"
             }
             AmMangerClient.TYPE_RUNNING -> {
-                tvWalkStatus.text = "第${walkRun.eventCount}次走路"
+                tvWalkStatus.text = "第${walkRun.eventCount + 1}次走路"
             }
         }
     }
