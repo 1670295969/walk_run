@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.liu.walk.MainActivity">
+
+
+    <EditText
+        android:id="@+id/et_walk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请设置走路分钟数,默认1分钟"
+        android:inputType="number"
+        android:maxLength="4" />
+
+
+    <EditText
+        android:id="@+id/et_running"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请设置跑步分钟数，默认2分钟"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/et_Count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请设置循环次数,默认7次"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始" />
+
+    <Button
+        android:id="@+id/btn_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结束" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        tools:text="该走路了"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
